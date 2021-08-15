@@ -1,5 +1,6 @@
 package com.jeongho.jpashop.domain.item;
 
+import com.jeongho.jpashop.controller.NotEnoughStockException;
 import com.jeongho.jpashop.domain.Category;
 import com.jeongho.jpashop.domain.OrderItem;
 import lombok.Getter;
@@ -25,4 +26,26 @@ public abstract class Item {
 
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
+    
+    /**
+    * @desc : 재고 추가 비즈니스로직
+    * @author : 박정호
+    * @date : 2021-08-16 오전 12:12
+    */
+    public void addStock(int quantity){
+        this.stockQuantity += quantity;
+    }
+
+    /**
+    * @desc : 재고 감소 로직
+    * @author : 박정호
+    * @date : 2021-08-16 오전 12:13
+    */
+    public void removeStock(int quantity){
+        int restStock = this.stockQuantity - quantity;
+        if(restStock<0){
+            throw new NotEnoughStockException("재고가 부족합니다.");
+        }
+        this.stockQuantity = restStock;
+    }
 }
