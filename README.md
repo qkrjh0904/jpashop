@@ -3,6 +3,7 @@
 ---
 ## Settings
 ##### 1. Spring Boot + JPA + H2
+##### 2. Junit5
 
 ---
 ## Entity Class 개발
