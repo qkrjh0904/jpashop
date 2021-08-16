@@ -1,4 +1,4 @@
-package com.jeongho.jpashop.controller;
+package com.jeongho.jpashop.Exception;
 
 public class NotEnoughStockException extends RuntimeException{
     public NotEnoughStockException() {

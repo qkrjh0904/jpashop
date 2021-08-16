@@ -1,8 +1,7 @@
 package com.jeongho.jpashop.domain.item;
 
-import com.jeongho.jpashop.controller.NotEnoughStockException;
+import com.jeongho.jpashop.Exception.NotEnoughStockException;
 import com.jeongho.jpashop.domain.Category;
-import com.jeongho.jpashop.domain.OrderItem;
 import lombok.Getter;
 import lombok.Setter;
 

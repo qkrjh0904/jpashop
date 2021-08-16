@@ -1,6 +1,6 @@
 package com.jeongho.jpashop.service;
 
-import com.jeongho.jpashop.controller.NotEnoughStockException;
+import com.jeongho.jpashop.Exception.NotEnoughStockException;
 import com.jeongho.jpashop.domain.Address;
 import com.jeongho.jpashop.domain.Member;
 import com.jeongho.jpashop.domain.Order;
