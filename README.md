@@ -37,5 +37,9 @@
 > cascade 설정을 해주면 한번에 persist 된다.  
 > 예를들어 OrderItems를 cascade 설정을 해두면 Order를 persist할 때 OrderItems까지 persist된다.  
 
-
+---
+## Domain Model Pattern
+##### 1. 비즈니스 로직 대부분이 Entity에 있다.
+##### 2. 서비스 계층은 단순히 Entity에 필요한 요청을 위임하는 역할을 한다.
+##### 3. 반대로 Entity에는 비즈니스 로직이 거의 없고 서비스 계층에서 대부분의 비즈니스 로직을 처리하는것을 트랜잭션 스크립트 패턴이라 한다.
 
