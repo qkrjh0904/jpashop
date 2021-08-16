@@ -1,4 +1,4 @@
-package com.jeongho.jpashop;
+package com.jeongho.jpashop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
