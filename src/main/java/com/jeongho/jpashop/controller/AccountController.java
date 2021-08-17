@@ -1,7 +1,6 @@
 package com.jeongho.jpashop.controller;
 
 import com.jeongho.jpashop.domain.Account;
-import com.jeongho.jpashop.repository.AccountRepository;
 import com.jeongho.jpashop.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +16,6 @@ public class AccountController {
 
     @GetMapping("/account/{role}/{username}/{password}")
     public Account createMember(@ModelAttribute Account account) {
-        return accountService.createMember(account);
+        return accountService.createAccount(account);
     }
 }
